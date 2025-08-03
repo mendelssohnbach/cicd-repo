@@ -8,7 +8,7 @@ on:
               - info                      # 選択肢2
               - warning                   # 選択肢3
               - error                     # 選択肢4
-            # description: Log level        # 入力パラメータの概要
+            description: Log level        # 入力パラメータの概要
 jobs:
   run:
     runs-on: ubuntu-latest
