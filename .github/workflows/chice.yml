@@ -1,0 +1,16 @@
+name: Choice
+on:
+  workflow_dispatch:                       # 手動実行イベント
+    inputs:
+        log-level:                     # 入力パラメータ名
+            type: choice                  # データ型（選択肢）
+            options:                      # 選択肢の定義
+              - info                      # 選択肢2
+              - warning                   # 選択肢3
+              - error                     # 選択肢4
+            # description: Log level        # 入力パラメータの概要
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "${{ inputs.log-level }}" # 入力パラメータ「greeting」の参照
